@@ -81,4 +81,11 @@ class LoginController extends GetxController {
   onNeedHelpTap() {
     // Get.offNamed(Routes.dashboard);
   }
+
+  @override
+  void onClose() {
+    userNameFieldController.dispose();
+    passwordFieldController.dispose();
+    super.onClose();
+  }
 }
